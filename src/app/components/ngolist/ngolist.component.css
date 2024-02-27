@@ -1,0 +1,38 @@
+/* Style for the panel */
+.container {
+    max-width: 600px;
+    margin:  auto;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #f51919;
+    border-radius: 5px;
+}
+
+.panel-heading {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 15px;
+    border-radius: 0;
+}
+
+
+.table {
+
+    width: 100%;
+    border-collapse: collapse;
+}
+.table th {
+    background-color: #337ab7;
+    color: #fff;
+    text-align: left;
+    padding: 8px;
+}
+
+.table td {
+    padding: 8px;
+}
+
+button {
+    margin-right: 10px;
+}

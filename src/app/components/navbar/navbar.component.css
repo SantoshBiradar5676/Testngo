@@ -1,0 +1,72 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+/**************** NAVBAR STYLE *********************/
+.navbar{
+height: 40px;
+
+}
+.topNav{
+  height: 35px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.social-contact span{
+color: white;
+padding: 15px;
+text-align: center;
+}
+.social-contact span:hover{
+color: rgb(73, 93, 193);
+cursor: pointer; 
+}
+
+.social-icons {
+  float: right;
+}
+
+.social-icons a {
+  display: inline-block;
+  color: rgb(239, 179, 179);
+  background-color: whitesmoke;
+  text-align: center;
+  justify-content: center;
+  padding: 5px 8px;
+  text-decoration: none;
+}
+
+.social-icons a:hover{
+  color:whitesmoke;
+  background-color:rgb(48, 9, 186);;
+  
+}
+.d-flex input{
+border-radius: 10px;
+outline: none;
+
+}
+
+
+.selectbox ul li a{
+height: 35px;
+border-radius: 15px;
+}
+.selectbox ul li a:hover{
+
+border-bottom: 2px solid rgb(10, 213, 17);
+
+}
+
+/**************** END NAVBAR STYLE *********************/
+/* Start carousel  */
+.w-100{
+width: 400px;
+height: 300px;
+}
+
+/* END carousel  */

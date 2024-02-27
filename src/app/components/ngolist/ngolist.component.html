@@ -1,0 +1,36 @@
+<div class="panel panel-primary" class="container">
+    <div class="panel-heading">
+        <h2>NGO List</h2>
+
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Ngo_id</th>
+                    <th>Ngo_Name</th>
+                    <th>NGO Description</th>
+                    <th>Give Donation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let n of ngos | async">
+                    <td>{{n.ngo_id}}</td>
+                    <td>{{n.name}}</td>
+                    <td>{{n.description}}</td>
+                   
+
+                    <td>
+                        <button  class="btn btn-primary">Donate</button>
+                        <!-- <button (click)="deletePlayer(p.playerId)" class="btn btn-danger">Delete</button> -->
+                     <!-- <button (click)="playerDetails(p.playerId)" class="btn btn-primary" style="margin-left: 10px">Details</button>  -->
+                        <!-- <button (click)="updateDetails(p.playerId)" class="btn btn-secondary" style="margin-left: 10px">Edit</button> -->
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    </div>
