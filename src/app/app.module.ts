@@ -11,6 +11,10 @@ import { Router } from '@angular/router';
 import { NgoComponent } from './components/ngo/ngo.component';
 import { NgolistComponent } from './components/ngolist/ngolist.component';
 import { AddDonationComponent } from './components/add-donation/add-donation.component';
+import { ExpendituresComponent } from './components/expenditures/expenditures.component';
+import { HomeComponent } from './components/home/home.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { AddDonationComponent } from './components/add-donation/add-donation.com
     AddUserComponent,
     NgoComponent,
     NgolistComponent,
-    AddDonationComponent
+    AddDonationComponent,
+    ExpendituresComponent,
+    HomeComponent,
+    FooterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

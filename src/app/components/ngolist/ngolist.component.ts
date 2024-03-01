@@ -7,33 +7,54 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-ngolist',
   templateUrl: './ngolist.component.html',
-  styleUrl: './ngolist.component.css'
+  styleUrls: ['./ngolist.component.css'] // Update to styleUrls
 })
 export class NgolistComponent {
-  public  ngos:Observable<Ngo[]> =of([]);
-  constructor(private service:NgoserviceService, private router:Router){
-  
+
+  selectedNgo: Ngo | null = null; // Hold the selected NGO details
+  click: boolean = true;
+  public ngos: Observable<Ngo[]> = of([]);
+  totalExpenditureAmount: number = 0;
+
+  constructor(private service: NgoserviceService, private router: Router) {}
+
+  ngOnInit() {
+    this.getAll();
   }
- ngOnInit(){
-  this.getAll();
- }
- getAll(){
-  return this.ngos=this.service.getAllNgo();
- }
 
-//  deleteNgo(id:any){
-//  return this.service.deleteNgo(id).subscribe((data)=>{
-//   console.log(data);
-//   this.getAll();
-//  })
-//  }
+  getAll() {
+    this.ngos = this.service.getAllNgo();
+  }
 
-//  ngoDetails(id:number){
-//   this.router.navigate(['details', id]);
-//  }
+  showDetails(ngo: Ngo): void {
+    this.click = false;
+    this.selectedNgo = ngo;
+    this.calculateTotalExpenditure(); // Calculate total expenditure when NGO details are shown
+  }
+
+  goBack(): void {
+    this.selectedNgo = null;
+    this.click = true;
+  }
+
+  calculateTotalExpenditure() {
+    if (this.selectedNgo) {
+      this.totalExpenditureAmount = this.selectedNgo.expenditures.reduce((total, e) => total + e.exp_amount, 0);
+    }
+  }
+
+  //  deleteNgo(id:any){
+  //  return this.service.deleteNgo(id).subscribe((data)=>{
+  //   console.log(data);
+  //   this.getAll();
+  //  })
+  //  }
+
+  //  ngoDetails(id:number){
+  //   this.router.navigate(['details', id]);
+  //  }
  
-//  updateDetails(id:number){
-//   this.router.navigate(['update', id])
-//  }
+  //  updateDetails(id:number){
+  //   this.router.navigate(['update', id])
+  //  }
 }
-

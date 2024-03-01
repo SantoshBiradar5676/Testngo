@@ -3,6 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { NgoComponent } from './components/ngo/ngo.component';
 import { NgolistComponent } from './components/ngolist/ngolist.component';
+import { Expenditure } from './models/Expenditures';
+import { ExpendituresComponent } from './components/expenditures/expenditures.component';
+import { AddDonationComponent } from './components/add-donation/add-donation.component';
+import { HomeComponent } from './components/home/home.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { AboutComponent } from './components/about/about.component';
 
 const routes: Routes = [
   {
@@ -16,7 +22,18 @@ const routes: Routes = [
       {
         path:'list',
         component: NgolistComponent
-        }
+        },
+        {
+          path:'addExp',
+          component: ExpendituresComponent
+          },
+          {
+            path:'addDonation',
+            component: AddDonationComponent
+            },
+            { path: '', component: HomeComponent },
+            { path: 'About', component: AboutComponent },
+          
 ];
 
 @NgModule({

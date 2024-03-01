@@ -1,8 +1,8 @@
 <div class="panel panel-primary" class="container">
-    <div class="panel-heading">
-        <h2>NGO List</h2>
+    <div  *ngIf="click">
+        <h2 class="panel-heading">NGO List</h2>
 
-    </div>
+   
     <div class="panel-body">
         <table class="table table-striped">
             <thead>
@@ -11,6 +11,7 @@
                     <th>Ngo_Name</th>
                     <th>NGO Description</th>
                     <th>Give Donation</th>
+                    <th>View Details</th>
                 </tr>
             </thead>
             <tbody>
@@ -18,19 +19,59 @@
                     <td>{{n.ngo_id}}</td>
                     <td>{{n.name}}</td>
                     <td>{{n.description}}</td>
-                   
-
                     <td>
-                        <button  class="btn btn-primary">Donate</button>
-                        <!-- <button (click)="deletePlayer(p.playerId)" class="btn btn-danger">Delete</button> -->
-                     <!-- <button (click)="playerDetails(p.playerId)" class="btn btn-primary" style="margin-left: 10px">Details</button>  -->
-                        <!-- <button (click)="updateDetails(p.playerId)" class="btn btn-secondary" style="margin-left: 10px">Edit</button> -->
+                        <button class="btn btn-primary" routerLink="/addDonation" >Donate</button>   
                     </td>
-
+                    <td> 
+                        <button class="btn btn-primary" (click)="showDetails(n)">Details</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
+    </div>
+    </div>
+    <div *ngIf="selectedNgo" class="custom">
+        <h3>NGO Details</h3>
+        <p><strong>Ngo_id:</strong> {{ selectedNgo.ngo_id }}</p>
+        <p><strong>Ngo_Name:</strong> {{ selectedNgo.name }}</p>
+        <p><strong>NGO Description:</strong> {{ selectedNgo.description }}</p>
+        <p><strong>Expenditure</strong>
+            <div>
+            <table class="table ">
+ 
+            <!-- <p>{{e.exp_amount}}</p>
+            <p>{{e.description}}</p>
+            <p>{{e.expenditureDate}}</p> -->
+            
+                <thead>
+                    <tr>
+                        <th>Exp_amount</th>
+                        <th>Description</th>
+                        <th>ExpenditureDate</th>
+                        <!-- Add more headers as needed -->
+                    </tr>
+                </thead>
+                <tbody *ngFor="let e of selectedNgo.expenditures">
+                    <tr>
+                        <td>{{e.exp_amount}}</td>
+                        <td>{{e.description}}</td>
+                        <td>{{e.expenditureDate}}</td>
+                    </tr>
+                    
+                </tbody>
+                <tr>  <td>Total Expenditure: {{totalExpenditureAmount}}</td></tr>
+            </table>
+        </div>
+        <button class="btn btn-primary" (click)="goBack()">Back</button>
 
+        <!-- Add more details as needed -->
+    </div>
     </div>
 
-    </div>
+
+                     
+                        <!-- donate(ngoId: string): void {
+                            // Implement your donation logic here, e.g., navigate to a donation page
+                            console.log('Donate to NGO with ID:', ngoId);                        <button (click)="deletePlayer(p.playerId)" class="btn btn-danger">Delete</button> -->
+                     <!-- <button (click)="playerDetails(p.playerId)" class="btn btn-primary" style="margin-left: 10px">Details</button>  -->
+                        <!-- <button (click)="updateDetails(p.playerId)" class="btn btn-secondary" style="margin-left: 10px">Edit</button> -->

@@ -1,6 +1,6 @@
 
 
-  <div class="topNav">
+  <div class="topNav bg-dark">
     <div class="social-contact">
       <span><i class="fa-solid fa-phone"></i>&nbsp;958765895</span><span><i class="fa-regular fa-envelope"></i>&nbsp;ajay123&#64;gmail.com</span>
     </div>
@@ -11,9 +11,13 @@
       <!-- Add more social media icons as needed -->
     </div>
   </div>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-secondary ">
         <div class="container-fluid selectbox">
-          <a class="navbar-brand" href="#">i Donation</a>
+        <a href="#">
+          <img src="assets/logo2.png" alt="i Donation Logo" >
+        </a>
+          <!-- <a class="navbar-brand" href="#" style="padding-left: 10px;">i Donation</a> -->
+          
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -21,24 +25,27 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
               
               <li class="nav-item ">
-                <a class="nav-link " aria-current="page" href="#"><i class="fa-solid fa-house-user"></i>&nbsp;Home</a>
+                <a class="nav-link " aria-current="page" href="#"><i class="fa-solid fa-house"></i>&nbsp;Home</a>
               </li>
              
               <li class="nav-item">
-                <a class="nav-link" routerLink="/add" style="margin-left:10px">Add User</a>
+                <a class="nav-link" routerLink="/add" style="margin-left:10px"><i class="fa-solid fa-user"></i>User</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                  NGO
+                  <i class="fa-solid fa-building-ngo"></i> NGO
                 </a>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" routerLink="/addngo" >Add NGO</a>
                   <a class="dropdown-item" routerLink="/list">NGO List</a>
-                  <a class="dropdown-item" href="#">Update</a>
+                  <a class="dropdown-item" routerLink= "/addExp">Expenditure</a>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" routerLink="/addDonation" style="margin-left:10px"><i class="fa-solid fa-hand-holding-dollar"></i>Add Donation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/About">About</a>
               </li>
             
             </ul>
@@ -51,6 +58,7 @@
           </div>
         </div>
     </nav>
+    
 <!-- 
     <div >
       <img src="../assets/wall1.jpg" class="d-block w-100" alt="...">
