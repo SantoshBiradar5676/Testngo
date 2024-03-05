@@ -3,12 +3,11 @@
 # Footer
 --------------------------------------------------------------*/
 #footer {
-   position:fixed;
+   /* position:fixed; */
     color: #fff;
     font-size: 14px;
     background: #111;
     position: relative;
-    margin-top: 80px;
   }
   
   #footer .footer-top {

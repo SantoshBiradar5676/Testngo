@@ -28,6 +28,9 @@ export class NgoserviceService {
   getAllNgo():any{
     return this.http.get(`${this.baseUrl}/ngos/getAllNgos`);
   }
+  update(ngo:object):Observable<Object>{
+    return this.http.put(`${this.baseUrl}/ngo/update`, ngo);
+  }
  
 //expenditure
   addExpenditure(expenditure: Object): Observable<any> {

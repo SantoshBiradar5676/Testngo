@@ -15,6 +15,8 @@ import { ExpendituresComponent } from './components/expenditures/expenditures.co
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { DonationsComponent } from './components/donations/donations.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { AboutComponent } from './components/about/about.component';
     ExpendituresComponent,
     HomeComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    AdminComponent,
+    DonationsComponent
   ],
   imports: [
     BrowserModule,

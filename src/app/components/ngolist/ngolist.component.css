@@ -1,6 +1,6 @@
 /* Style for the panel */
 .custom{
-    max-width: 600px;
+
     margin:  auto;
     margin-top: 30px;
     padding: 20px;
@@ -10,7 +10,7 @@
 }
 
 .panel-heading {
-    background-color: #337ab7;
+    background-color: #82c0f7;
     color: #fff;
     padding: 15px;
     border-radius: 0;
@@ -18,18 +18,20 @@
 
 
 .table {
+    background-color: #f2f7fc;
 
     width: 100%;
     border-collapse: collapse;
 }
 .table th {
-    background-color: #337ab7;
+    background-color: #82c0f7;
     color: #fff;
     text-align: left;
     padding: 8px;
 }
 
 .table td {
+    
     padding: 8px;
 }
 

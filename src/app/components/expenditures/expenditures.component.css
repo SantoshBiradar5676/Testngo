@@ -1,9 +1,11 @@
 .container{
    
     margin-top: 10px;
+   
     border: 10px;
     size: auto;
-    width: 500px;
-    border: 3px solid indigo;
+   border-top-left-radius: 20px;
+   border-top-left-radius: 20px;
+   border: 3px solid indigo;
     background-color:beige;
 }

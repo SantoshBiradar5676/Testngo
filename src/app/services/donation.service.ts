@@ -10,7 +10,7 @@ export class DonationService {
   constructor(private http:HttpClient) { }
 
   addDonation(donation:Object):Observable<Object>{
-    return this.http.post(`${this.baseUrl}`, donation);
+    return this.http.post(`${this.baseUrl}/create`, donation);
   }
 
 }

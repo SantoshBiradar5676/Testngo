@@ -18,14 +18,13 @@ export class AddDonationComponent {
   constructor(private donationService: DonationService,private service:NgoserviceService) { }
 
   ngOnInit() {
-    // Fetch NGOs and Users from your service or API
+    
     this.fetchNgos();
     this.fetchUsers();
   }
 
   fetchNgos() {
-    // Call service method to fetch NGOs
-    // Assuming you have a method called getNgos() in your service
+   
     this.service.getAllNgo().subscribe(
       (ngos: Ngo[]) => {
         this.ngos = ngos;
@@ -35,7 +34,7 @@ export class AddDonationComponent {
       }
     );
   }
-  // fetchUsers() {}
+ 
   fetchUsers() {
     // Call service method to fetch Users
     // Assuming you have a method called getUsers() in your service

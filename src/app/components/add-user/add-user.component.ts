@@ -15,17 +15,20 @@ export class AddUserComponent {
   submitted=false;
   user = new User();
 
-  
+  save() {
+    this.service.createUser(this.user).subscribe();
+    this.submitted=true;
+   }
   onSubmit(){
     this.save();
-    this.submitted=true;
-  
+   this.gotoHome();
+
   }
   gotoHome(){
-    this.router.navigate(['/']);
+    this.router.navigate(['/add']);
+   
+
    }
-  save() {
-   this.service.createUser(this.user).subscribe();
- 
-  }
+  
+  
 }

@@ -12,10 +12,23 @@
         <input type="number" id="exp_amount" class="form-control" [(ngModel)]="donation.amount" name="amount" required>
         <!-- You can add validation messages here -->
       </div>
+      <div class="form-group">
+        <label for="orderId">orderId:</label>
+        <input type="text" id="orderId" class="form-control" [(ngModel)]="donation.orderId" name="amount" required>
+        <!-- You can add validation messages here -->
+      </div>
+
+      <div class="form-group">
+        <label for="status">orderId:</label>
+        <input type="text" id="status" class="form-control" [(ngModel)]="donation.status" name="amount" required>
+        <!-- You can add validation messages here -->
+      </div>
+      
+      
   
     
 
-
+ <!--Ngo (Example Field) -->
   <div class="form-group">
     <label for="ngo_id">NGO:</label>
     <select class="form-control" id="ngo_id" [(ngModel)]="donation.ngo.ngo_id" name="ngo">
@@ -32,13 +45,13 @@
       <option *ngFor="let u of users" [value]="u.user_id">{{ u.user_id}}</option>
     </select>
   </div>
-      <!-- Expenditure Date (Example Field) -->
+      <!-- Expenditure Date (Example Field)
       <div class="form-group">
         <label for="donationDate">Date:</label>
         <input type="datetime-local" id="donationDate" class="form-control" name="donationDate" [(ngModel)]="donation.donationDate">
 
-        <!-- You can add validation messages here -->
-      </div>
+         You can add validation messages here
+      </div> -->
   
       <!-- Submit Button -->
       <button type="submit" class="btn btn-primary">Submit</button>

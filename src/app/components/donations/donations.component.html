@@ -1,0 +1,15 @@
+<div class="container text-center">
+    <h3 class="my-3">Donate</h3>
+    <form #donationForm="ngForm">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control my-3" placeholder="Enter your email" [(ngModel)]="userDetails.email" name="email" required>
+  
+      <label for="contact">Contact:</label>
+      <input type="tel" class="form-control my-3" placeholder="Enter your contact number" [(ngModel)]="userDetails.contact" name="contact" required>
+  
+      <label for="amount">Amount:</label>
+      <input type="text" class="form-control my-3" placeholder="Enter amount" [(ngModel)]="amount" name="amount" required>
+      <br>
+      <button (click)="paymentStart()" class="btn btn-success" [disabled]="donationForm.invalid">Donate</button>
+    </form>
+  </div>

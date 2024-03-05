@@ -21,11 +21,16 @@ export class NgoComponent {
     this.submitted=true;
    
   }
-  gotoHome(){
-    this.router.navigate(['/']);
-   }
+  
   save() {
    this.service.createNgo(this.ngo).subscribe();
    this.gotoHome()
+  }
+  gotoHome(){
+    this.router.navigate(['/addngo']);
+   }
+  updateNgo(){
+    this.service.update(this.ngo).subscribe();
+  
   }
 }
